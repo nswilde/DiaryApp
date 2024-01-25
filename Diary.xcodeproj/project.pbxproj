@@ -13,6 +13,9 @@
 		5403C5D72B5DC4530021F326 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5403C5D62B5DC4530021F326 /* Preview Assets.xcassets */; };
 		5403C5DF2B5DC52A0021F326 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5403C5DD2B5DC52A0021F326 /* Main.xcdatamodeld */; };
 		5403C5E12B5DC7CB0021F326 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403C5E02B5DC7CB0021F326 /* DataController.swift */; };
+		547364BD2B61C3FC0019BC90 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547364BC2B61C3FC0019BC90 /* SidebarView.swift */; };
+		547364BF2B61C4010019BC90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547364BE2B61C4010019BC90 /* DetailView.swift */; };
+		547364C12B61E9950019BC90 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547364C02B61E9950019BC90 /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		5403C5DE2B5DC52A0021F326 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		5403C5E02B5DC7CB0021F326 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		5403C5E22B5DD34B0021F326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		547364BC2B61C3FC0019BC90 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		547364BE2B61C4010019BC90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		547364C02B61E9950019BC90 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +65,11 @@
 			children = (
 				5403C5E22B5DD34B0021F326 /* Info.plist */,
 				5403C5CE2B5DC4520021F326 /* DiaryApp.swift */,
-				5403C5D02B5DC4520021F326 /* ContentView.swift */,
+				547364C02B61E9950019BC90 /* Filter.swift */,
 				5403C5E02B5DC7CB0021F326 /* DataController.swift */,
+				547364BC2B61C3FC0019BC90 /* SidebarView.swift */,
+				5403C5D02B5DC4520021F326 /* ContentView.swift */,
+				547364BE2B61C4010019BC90 /* DetailView.swift */,
 				5403C5DD2B5DC52A0021F326 /* Main.xcdatamodeld */,
 				5403C5D22B5DC4530021F326 /* Assets.xcassets */,
 				5403C5D42B5DC4530021F326 /* Diary.entitlements */,
@@ -147,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547364C12B61E9950019BC90 /* Filter.swift in Sources */,
 				5403C5DF2B5DC52A0021F326 /* Main.xcdatamodeld in Sources */,
+				547364BF2B61C4010019BC90 /* DetailView.swift in Sources */,
 				5403C5E12B5DC7CB0021F326 /* DataController.swift in Sources */,
+				547364BD2B61C3FC0019BC90 /* SidebarView.swift in Sources */,
 				5403C5D12B5DC4520021F326 /* ContentView.swift in Sources */,
 				5403C5CF2B5DC4520021F326 /* DiaryApp.swift in Sources */,
 			);
