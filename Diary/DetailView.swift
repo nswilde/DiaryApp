@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+//add extension to support macos later
+//extension View {
+//    func inlineNavigationBar() -> some View {
+//        #if os(iOS)
+//        self.navigationBarTitleDisplayMode(.inline)
+//        #else
+//        self
+//        #endif
+//    }
+//    
+//}
+
 struct DetailView: View {
     @EnvironmentObject var dataController: DataController
     
@@ -18,6 +30,8 @@ struct DetailView: View {
                 NoIssueView()
             }
         }
+        .navigationTitle("Details")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
