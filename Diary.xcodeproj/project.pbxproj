@@ -85,8 +85,8 @@
 			children = (
 				5403C5E22B5DD34B0021F326 /* Info.plist */,
 				5403C5CE2B5DC4520021F326 /* DiaryApp.swift */,
-				547364BC2B61C3FC0019BC90 /* SidebarView.swift */,
 				5403C5D02B5DC4520021F326 /* ContentView.swift */,
+				547364BC2B61C3FC0019BC90 /* SidebarView.swift */,
 				542C821A2B674F380039959A /* IssueRow.swift */,
 				547364BE2B61C4010019BC90 /* DetailView.swift */,
 				543557E12B69ABB400397E59 /* IssueView.swift */,
