@@ -85,15 +85,12 @@
 			children = (
 				5403C5E22B5DD34B0021F326 /* Info.plist */,
 				5403C5CE2B5DC4520021F326 /* DiaryApp.swift */,
-				547364C02B61E9950019BC90 /* Filter.swift */,
 				547364BC2B61C3FC0019BC90 /* SidebarView.swift */,
 				5403C5D02B5DC4520021F326 /* ContentView.swift */,
-				5496484B2B72530500C76788 /* Bundle-Decodable.swift */,
 				542C821A2B674F380039959A /* IssueRow.swift */,
 				547364BE2B61C4010019BC90 /* DetailView.swift */,
 				543557E12B69ABB400397E59 /* IssueView.swift */,
 				543557E32B69ABBD00397E59 /* NoIssueView.swift */,
-				549648512B72583100C76788 /* Award.swift */,
 				549648532B7258DF00C76788 /* AwardsView.swift */,
 				5496484D2B72579600C76788 /* Awards.json */,
 				5496484E2B72579600C76788 /* Colors.xcassets */,
@@ -116,6 +113,9 @@
 		54EAB1E52B64A11700D0CB32 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				5496484B2B72530500C76788 /* Bundle-Decodable.swift */,
+				547364C02B61E9950019BC90 /* Filter.swift */,
+				549648512B72583100C76788 /* Award.swift */,
 				5403C5E02B5DC7CB0021F326 /* DataController.swift */,
 				54EAB1E12B649F4300D0CB32 /* Issue-CoreDataHelpers.swift */,
 				54EAB1E32B64A07100D0CB32 /* Tag-CoreDataHelpers.swift */,
