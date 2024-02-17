@@ -60,7 +60,12 @@ extension Issue {
         issue.creationDate = .now
         return issue
     }
+    
+    var issueFormattedCreationDate: String {
+        issueCreationDate.formatted(date: .numeric, time: .omitted)
+    }
 }
+
 
 extension Issue: Comparable {
     public static func <(lhs: Issue, rhs: Issue) -> Bool {
