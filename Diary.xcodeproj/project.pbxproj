@@ -14,6 +14,12 @@
 		5403C5DF2B5DC52A0021F326 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5403C5DD2B5DC52A0021F326 /* Main.xcdatamodeld */; };
 		5403C5E12B5DC7CB0021F326 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403C5E02B5DC7CB0021F326 /* DataController.swift */; };
 		542C821B2B674F380039959A /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C821A2B674F380039959A /* IssueRow.swift */; };
+		5434A4DD2B8566EB0074A70B /* SidebarViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434A4DC2B8566EB0074A70B /* SidebarViewToolbar.swift */; };
+		5434A4DF2B85687C0074A70B /* IssueViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434A4DE2B85687C0074A70B /* IssueViewToolbar.swift */; };
+		5434A4E12B8569B40074A70B /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434A4E02B8569B40074A70B /* ContentViewToolbar.swift */; };
+		5434A4E32B85941B0074A70B /* TagsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434A4E22B85941B0074A70B /* TagsMenuView.swift */; };
+		5434A4E52B8595040074A70B /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434A4E42B8595040074A70B /* SmartFilterRow.swift */; };
+		5434A4E72B85955D0074A70B /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434A4E62B85955D0074A70B /* UserFilterRow.swift */; };
 		543557E22B69ABB400397E59 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543557E12B69ABB400397E59 /* IssueView.swift */; };
 		543557E42B69ABBD00397E59 /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543557E32B69ABBD00397E59 /* NoIssueView.swift */; };
 		5450AC702B81669300635559 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5450AC722B81669300635559 /* Localizable.strings */; };
@@ -41,6 +47,12 @@
 		5403C5E02B5DC7CB0021F326 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		5403C5E22B5DD34B0021F326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		542C821A2B674F380039959A /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
+		5434A4DC2B8566EB0074A70B /* SidebarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewToolbar.swift; sourceTree = "<group>"; };
+		5434A4DE2B85687C0074A70B /* IssueViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewToolbar.swift; sourceTree = "<group>"; };
+		5434A4E02B8569B40074A70B /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
+		5434A4E22B85941B0074A70B /* TagsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsMenuView.swift; sourceTree = "<group>"; };
+		5434A4E42B8595040074A70B /* SmartFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFilterRow.swift; sourceTree = "<group>"; };
+		5434A4E62B85955D0074A70B /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		543557E12B69ABB400397E59 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		543557E32B69ABBD00397E59 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
 		5450AC712B81669300635559 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -95,25 +107,15 @@
 			children = (
 				5403C5E22B5DD34B0021F326 /* Info.plist */,
 				5403C5CE2B5DC4520021F326 /* DiaryApp.swift */,
-				5403C5D02B5DC4520021F326 /* ContentView.swift */,
-				547364BC2B61C3FC0019BC90 /* SidebarView.swift */,
-				542C821A2B674F380039959A /* IssueRow.swift */,
-				547364BE2B61C4010019BC90 /* DetailView.swift */,
-				543557E12B69ABB400397E59 /* IssueView.swift */,
-				543557E32B69ABBD00397E59 /* NoIssueView.swift */,
-				549648532B7258DF00C76788 /* AwardsView.swift */,
-				547364C02B61E9950019BC90 /* Filter.swift */,
-				5496484B2B72530500C76788 /* Bundle-Decodable.swift */,
-				549648512B72583100C76788 /* Award.swift */,
-				5403C5E02B5DC7CB0021F326 /* DataController.swift */,
-				54EAB1E12B649F4300D0CB32 /* Issue-CoreDataHelpers.swift */,
-				54EAB1E32B64A07100D0CB32 /* Tag-CoreDataHelpers.swift */,
-				5403C5DD2B5DC52A0021F326 /* Main.xcdatamodeld */,
-				5450AC722B81669300635559 /* Localizable.strings */,
-				5450AC772B81677400635559 /* Localizable.stringsdict */,
-				5450AC7C2B816E7E00635559 /* Awards.json */,
-				5496484E2B72579600C76788 /* Colors.xcassets */,
+				5434A4EA2B8596870074A70B /* IssueView */,
+				5434A4ED2B8597150074A70B /* DetailView */,
+				5434A4EC2B8596CC0074A70B /* Awards */,
+				5434A4E92B8596720074A70B /* ContentView */,
+				5434A4E82B85965B0074A70B /* Sidebar */,
+				5434A4EB2B8596A70074A70B /* DataControl */,
+				5434A4EE2B8597300074A70B /* Localization */,
 				5403C5D22B5DC4530021F326 /* Assets.xcassets */,
+				5496484E2B72579600C76788 /* Colors.xcassets */,
 				5403C5D42B5DC4530021F326 /* Diary.entitlements */,
 				54EAB1E52B64A11700D0CB32 /* data */,
 				5403C5D52B5DC4530021F326 /* Preview Content */,
@@ -127,6 +129,78 @@
 				5403C5D62B5DC4530021F326 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5434A4E82B85965B0074A70B /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				547364BC2B61C3FC0019BC90 /* SidebarView.swift */,
+				5434A4E62B85955D0074A70B /* UserFilterRow.swift */,
+				5434A4E42B8595040074A70B /* SmartFilterRow.swift */,
+				5434A4DC2B8566EB0074A70B /* SidebarViewToolbar.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		5434A4E92B8596720074A70B /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				5403C5D02B5DC4520021F326 /* ContentView.swift */,
+				5434A4E02B8569B40074A70B /* ContentViewToolbar.swift */,
+				543557E32B69ABBD00397E59 /* NoIssueView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		5434A4EA2B8596870074A70B /* IssueView */ = {
+			isa = PBXGroup;
+			children = (
+				543557E12B69ABB400397E59 /* IssueView.swift */,
+				542C821A2B674F380039959A /* IssueRow.swift */,
+				5434A4E22B85941B0074A70B /* TagsMenuView.swift */,
+				5434A4DE2B85687C0074A70B /* IssueViewToolbar.swift */,
+			);
+			path = IssueView;
+			sourceTree = "<group>";
+		};
+		5434A4EB2B8596A70074A70B /* DataControl */ = {
+			isa = PBXGroup;
+			children = (
+				5403C5DD2B5DC52A0021F326 /* Main.xcdatamodeld */,
+				5496484B2B72530500C76788 /* Bundle-Decodable.swift */,
+				547364C02B61E9950019BC90 /* Filter.swift */,
+				5403C5E02B5DC7CB0021F326 /* DataController.swift */,
+				54EAB1E12B649F4300D0CB32 /* Issue-CoreDataHelpers.swift */,
+				54EAB1E32B64A07100D0CB32 /* Tag-CoreDataHelpers.swift */,
+			);
+			path = DataControl;
+			sourceTree = "<group>";
+		};
+		5434A4EC2B8596CC0074A70B /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				549648532B7258DF00C76788 /* AwardsView.swift */,
+				549648512B72583100C76788 /* Award.swift */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		5434A4ED2B8597150074A70B /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				547364BE2B61C4010019BC90 /* DetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		5434A4EE2B8597300074A70B /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5450AC7C2B816E7E00635559 /* Awards.json */,
+				5450AC722B81669300635559 /* Localizable.strings */,
+				5450AC772B81677400635559 /* Localizable.stringsdict */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		54EAB1E52B64A11700D0CB32 /* data */ = {
@@ -213,7 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				547364C12B61E9950019BC90 /* Filter.swift in Sources */,
+				5434A4E32B85941B0074A70B /* TagsMenuView.swift in Sources */,
 				549648522B72583100C76788 /* Award.swift in Sources */,
+				5434A4DF2B85687C0074A70B /* IssueViewToolbar.swift in Sources */,
+				5434A4E52B8595040074A70B /* SmartFilterRow.swift in Sources */,
 				549648542B7258DF00C76788 /* AwardsView.swift in Sources */,
 				543557E42B69ABBD00397E59 /* NoIssueView.swift in Sources */,
 				54EAB1E42B64A07100D0CB32 /* Tag-CoreDataHelpers.swift in Sources */,
@@ -221,9 +298,12 @@
 				5496484C2B72530500C76788 /* Bundle-Decodable.swift in Sources */,
 				54EAB1E22B649F4400D0CB32 /* Issue-CoreDataHelpers.swift in Sources */,
 				547364BF2B61C4010019BC90 /* DetailView.swift in Sources */,
+				5434A4E12B8569B40074A70B /* ContentViewToolbar.swift in Sources */,
+				5434A4DD2B8566EB0074A70B /* SidebarViewToolbar.swift in Sources */,
 				5403C5E12B5DC7CB0021F326 /* DataController.swift in Sources */,
 				547364BD2B61C3FC0019BC90 /* SidebarView.swift in Sources */,
 				5403C5D12B5DC4520021F326 /* ContentView.swift in Sources */,
+				5434A4E72B85955D0074A70B /* UserFilterRow.swift in Sources */,
 				543557E22B69ABB400397E59 /* IssueView.swift in Sources */,
 				542C821B2B674F380039959A /* IssueRow.swift in Sources */,
 				5403C5CF2B5DC4520021F326 /* DiaryApp.swift in Sources */,

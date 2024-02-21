@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-//add extension to support macos later
-//extension View {
+// add extension to support macos later
+// extension View {
 //    func inlineNavigationBar() -> some View {
 //        #if os(iOS)
 //        self.navigationBarTitleDisplayMode(.inline)
@@ -17,11 +17,11 @@ import SwiftUI
 //        #endif
 //    }
 //    
-//}
+// }
 
 struct DetailView: View {
     @EnvironmentObject var dataController: DataController
-    
+
     var body: some View {
         VStack {
             if let issue = dataController.selectedIssue {
