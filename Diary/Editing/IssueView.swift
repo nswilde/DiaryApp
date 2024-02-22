@@ -39,8 +39,13 @@ struct IssueView: View {
                     Text("Basic Information")
                         .font(.title2)
                         .foregroundStyle(.secondary)
-
-                    TextField("Description", text: $issue.issueContent, prompt: Text("Enter the issue description here"))
+                    // swiftlint:disable:next trailing_whitespace
+                    
+                    TextField("Description",
+                              text: $issue.issueContent,
+                              prompt: Text("Enter the issue description here"),
+                              axis: .vertical
+                    )
                 }
             }
         }
