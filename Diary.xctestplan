@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "5A454FD1-0883-44B6-AA7F-855C85141BD4",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Diary.xcodeproj",
+        "identifier" : "54EBA9CF2B8A932600F85662",
+        "name" : "DiaryTests"
+      }
+    }
+  ],
+  "version" : 1
+}
