@@ -37,7 +37,7 @@ final class ExtensionTests: BaseTestCase {
         issue.creationDate = testDate
         XCTAssertEqual(issue.issueCreationDate, testDate, "Changing creationDate should also change issueCreationDate.")
     }
-    
+
     func testIssueTagsUnwrap() {
         let tag = Tag(context: managedObjectContext)
         let issue = Issue(context: managedObjectContext)
