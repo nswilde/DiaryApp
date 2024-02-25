@@ -45,7 +45,7 @@ struct IssueRow: View {
             }
         }
         .accessibilityHint(issue.priority == 2 ? "High priority" : "")
-        //for testing purposes
+        //  for testing purposes
         .accessibilityIdentifier(issue.issueTitle)
     }
 }
