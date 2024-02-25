@@ -32,6 +32,7 @@
 		549648502B72579600C76788 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5496484E2B72579600C76788 /* Colors.xcassets */; };
 		549648522B72583100C76788 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549648512B72583100C76788 /* Award.swift */; };
 		549648542B7258DF00C76788 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549648532B7258DF00C76788 /* AwardsView.swift */; };
+		54DC39112B8AF8B1002C93FE /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DC39102B8AF8B1002C93FE /* ExtensionTests.swift */; };
 		54EAB1E22B649F4400D0CB32 /* Issue-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAB1E12B649F4300D0CB32 /* Issue-CoreDataHelpers.swift */; };
 		54EAB1E42B64A07100D0CB32 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EAB1E32B64A07100D0CB32 /* Tag-CoreDataHelpers.swift */; };
 		54EBA9D32B8A932600F85662 /* DiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EBA9D22B8A932600F85662 /* DiaryTests.swift */; };
@@ -86,6 +87,7 @@
 		5496484E2B72579600C76788 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		549648512B72583100C76788 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		549648532B7258DF00C76788 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		54DC39102B8AF8B1002C93FE /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		54EAB1E12B649F4300D0CB32 /* Issue-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		54EAB1E32B64A07100D0CB32 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		54EBA9D02B8A932600F85662 /* DiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +249,7 @@
 				54EBA9DB2B8A950600F85662 /* Diary.xctestplan */,
 				54EBA9D22B8A932600F85662 /* DiaryTests.swift */,
 				54EBA9DC2B8A96CE00F85662 /* AssetTests.swift */,
+				54DC39102B8AF8B1002C93FE /* ExtensionTests.swift */,
 				54EBA9E02B8AA14C00F85662 /* AwardsTest.swift */,
 				54EBA9E22B8AA8DD00F85662 /* DevelopmentTests.swift */,
 				54EBA9DE2B8A997F00F85662 /* TagTests.swift */,
@@ -414,6 +417,7 @@
 				54EBA9DD2B8A96CE00F85662 /* AssetTests.swift in Sources */,
 				54EBA9E12B8AA14C00F85662 /* AwardsTest.swift in Sources */,
 				54EBA9DF2B8A997F00F85662 /* TagTests.swift in Sources */,
+				54DC39112B8AF8B1002C93FE /* ExtensionTests.swift in Sources */,
 				54EBA9D32B8A932600F85662 /* DiaryTests.swift in Sources */,
 				54EBA9E32B8AA8DD00F85662 /* DevelopmentTests.swift in Sources */,
 			);
