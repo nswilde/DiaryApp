@@ -24,6 +24,11 @@ class DataController: ObservableObject {
     /// The lone CloudKit container used to store all our data.
     let container: NSPersistentCloudKitContainer
 
+    // Spotlight Part 1/3: Create a variable to handle Spotlight feature,
+    // allowing us to search within the app while we are on the homepage of iOS.
+    // Part 2 @ DataController initializer
+    var spotlightDelegate: NSCoreDataCoreSpotlightDelegate?
+
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedIssue: Issue?
 
@@ -101,14 +106,33 @@ class DataController: ObservableObject {
             using: remoteStoreChanged
         )
 
-        container.loadPersistentStores { _, error in
+        container.loadPersistentStores { [weak self] _, error in
             if let error {
                 fatalError("Fatal access loading store: \(error.localizedDescription)")
             }
 
+            // Spotlight Part 2/3: Initializes Spotlight function innately with our
+            // DataController, description is used to allow Strings within iOS
+            // to search our DataController with Spotlight, coordinator tells
+            // the spotlight function how to discern where the data is located
+            // in our app based on the source of the String input.
+            // Part 3 @ DiaryApp.swift loadSpotlightItem func
+            if let description = self?.container.persistentStoreDescriptions.first {
+                description.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+
+                if let coordinator = self?.container.persistentStoreCoordinator {
+                    self?.spotlightDelegate = NSCoreDataCoreSpotlightDelegate(
+                        forStoreWith: description,
+                        coordinator: coordinator
+                    )
+
+                    self?.spotlightDelegate?.startSpotlightIndexing()
+                }
+            }
+
             #if DEBUG
             if CommandLine.arguments.contains("enable-testing") {
-                self.deleteAll()
+                self?.deleteAll()
                 UIView.setAnimationsEnabled(false)
             }
             #endif
@@ -312,5 +336,17 @@ class DataController: ObservableObject {
             // fatalError("Unknown award criterion: \(award.criterion)")
             return false
         }
+    }
+
+    func issue(with uniqueIdentifier: String) -> Issue? {
+        guard let url = URL(string: uniqueIdentifier) else {
+            return nil
+        }
+
+        guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+            return nil
+        }
+
+        return try? container.viewContext.existingObject(with: id) as? Issue
     }
 }

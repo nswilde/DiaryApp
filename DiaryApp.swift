@@ -5,6 +5,7 @@
 //  Created by Nikki Wilde on 22/01/24.
 //
 
+import CoreSpotlight
 import SwiftUI
 
 @main
@@ -30,6 +31,17 @@ struct DiaryApp: App {
                         return
                     }
                 }
+                .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
+        }
+    }
+
+    // Spotlight part 3/3: Function that allows us to respond to Spotlight
+    // Search at app launch. "onContinueUserActivity" extension above
+    // utilizes this function.
+    func loadSpotlightItem(_ userActivity: NSUserActivity) {
+        if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+            dataController.selectedIssue = dataController.issue(with: uniqueIdentifier)
+            dataController.selectedFilter = .all
         }
     }
 }
