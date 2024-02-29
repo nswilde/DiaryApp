@@ -42,7 +42,6 @@ struct IssueView: View {
                     Text("Basic Information")
                         .font(.title2)
                         .foregroundStyle(.secondary)
-                    // swiftlint:disable:next trailing_whitespace
 
                     TextField("Description",
                               text: $issue.issueContent,

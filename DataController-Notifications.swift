@@ -17,7 +17,7 @@ extension DataController {
             switch settings.authorizationStatus {
             case .notDetermined:
                 let success = try await requestNotifications()
-                
+
                 if success {
                     try await placeReminders(for: issue)
                 } else {
