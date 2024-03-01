@@ -155,10 +155,6 @@
 		5403C5C22B5DC4520021F326 = {
 			isa = PBXGroup;
 			children = (
-				5403C5CE2B5DC4520021F326 /* DiaryApp.swift */,
-				5403C5E02B5DC7CB0021F326 /* DataController.swift */,
-				546DE7F72B8FED4300E4B152 /* DataController-Notifications.swift */,
-				546DE7FB2B900D4600E4B152 /* DataController-StoreKit.swift */,
 				5403C5CD2B5DC4520021F326 /* Diary */,
 				54EBA9D12B8A932600F85662 /* DiaryTests */,
 				54C757FF2B8BD60A00998BB2 /* DiaryUITests */,
@@ -187,6 +183,10 @@
 				549C96372B88154F008C5802 /* Extensions */,
 				549C96352B8814FE008C5802 /* Localization */,
 				549C96362B88152D008C5802 /* Configuration */,
+				5403C5CE2B5DC4520021F326 /* DiaryApp.swift */,
+				5403C5E02B5DC7CB0021F326 /* DataController.swift */,
+				546DE7F72B8FED4300E4B152 /* DataController-Notifications.swift */,
+				546DE7FB2B900D4600E4B152 /* DataController-StoreKit.swift */,
 				5403C5D22B5DC4530021F326 /* Assets.xcassets */,
 				5496484E2B72579600C76788 /* Colors.xcassets */,
 				5403C5D52B5DC4530021F326 /* Preview Content */,

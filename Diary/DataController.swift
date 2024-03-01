@@ -5,6 +5,7 @@
 //  Created by Nikki Wilde on 22/01/24.
 //
 
+import StoreKit
 import CoreData
 import SwiftUI
 
@@ -46,6 +47,9 @@ class DataController: ObservableObject {
 
     /// The UserDefaults suite where we're saving user data.
     let defaults: UserDefaults
+
+    /// The Storekid products we've loaded for the store.
+    @Published var products = [Product]()
 
     static var preview: DataController = {
         let dataController = DataController(inMemory: true)
@@ -354,6 +358,9 @@ class DataController: ObservableObject {
             let fetchRequest = Tag.fetchRequest()
             let awardCount = count(for: fetchRequest)
             return awardCount >= award.value
+
+        case "unlock":
+            return fullVersionUnlocked
 
         default:
             // an uknown award criterion; this should never be allowed
