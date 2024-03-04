@@ -71,6 +71,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		546DE8382B956CED00E4B152 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5403C5CB2B5DC4520021F326 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5403C5CE2B5DC4520021F326 /* DiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryApp.swift; sourceTree = "<group>"; };
@@ -328,6 +341,7 @@
 				5403C5C82B5DC4520021F326 /* Frameworks */,
 				5403C5C92B5DC4520021F326 /* Resources */,
 				549C96302B87FC5C008C5802 /* SwiftLint */,
+				546DE8382B956CED00E4B152 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
