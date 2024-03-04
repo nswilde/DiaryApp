@@ -6,14 +6,25 @@
 //
 
 import Foundation
+import SwiftUI
+
+
 
 extension IssueRow {
     @dynamicMemberLookup
     class ViewModel: ObservableObject {
         let issue: Issue
 
-        var iconOpacity: Double {
-            issue.priority == 2 ? 1 : 0
+        var iconOpacity: Color {
+            if issue.priority == 2 {
+                return Color.red
+            }
+            if issue.priority == 1 {
+                return Color.yellow
+            }
+            else {
+                return Color.green
+            }
         }
 
         var iconIdentifier: String {

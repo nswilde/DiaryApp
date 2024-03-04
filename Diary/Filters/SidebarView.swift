@@ -35,7 +35,7 @@ struct SidebarView: View {
             Button("Cancel", role: .cancel) { }
             TextField("New name", text: $viewModel.tagName)
         }
-        .navigationTitle("Filters")
+        .navigationTitle("My Diary")
     }
 }
 

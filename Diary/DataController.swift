@@ -159,15 +159,16 @@ class DataController: ObservableObject {
 
     func createSampleData() {
         let viewContext = container.viewContext
+        let categories = ["Negative", "Neutral", "Positive"]
 
-        for tagCounter in 1...5 {
+        for category in categories {
             let tag = Tag(context: viewContext)
             tag.id = UUID()
-            tag.name = "Tag \(tagCounter)"
+            tag.name = "\(category)"
 
             for issueCounter in 1...10 {
                 let issue = Issue(context: viewContext)
-                issue.title = "Issue \(tagCounter)-\(issueCounter)"
+                issue.title = "Entry \(category)-\(issueCounter)"
                 issue.content = NSLocalizedString("Description goes here", comment: "Enter a description")
                 issue.creationDate = .now
                 issue.completed = Bool.random()
@@ -311,14 +312,14 @@ class DataController: ObservableObject {
 
         let tag = Tag(context: container.viewContext)
         tag.id = UUID()
-        tag.name = NSLocalizedString("New tag", comment: "Create a new tag")
+        tag.name = NSLocalizedString("New tag, hold to rename", comment: "Create a new tag")
         save()
         return true
     }
 
     func newIssue() {
         let issue = Issue(context: container.viewContext)
-        issue.title = NSLocalizedString("New issue", comment: "Create a new issue")
+        issue.title = NSLocalizedString("New Diary Entry", comment: "Create a new entry")
         issue.creationDate = .now
         issue.priority = 1
 

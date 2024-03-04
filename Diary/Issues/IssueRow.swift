@@ -14,9 +14,9 @@ struct IssueRow: View {
     var body: some View {
         NavigationLink(value: viewModel.issue) {
             HStack {
-                Image(systemName: "exclamationmark.circle")
+                Image(systemName: "circle.fill")
                     .imageScale(.large)
-                    .opacity(viewModel.iconOpacity)
+                    .foregroundStyle(viewModel.iconOpacity)
                     .accessibilityIdentifier(viewModel.iconIdentifier)
 
                 VStack(alignment: .leading) {
@@ -37,8 +37,8 @@ struct IssueRow: View {
                         .font(.subheadline)
 
                     if viewModel.issue.completed {
-                        Text("CLOSED")
-                            .font(.body.smallCaps())
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
                     }
                 }
                 .foregroundStyle(.secondary)

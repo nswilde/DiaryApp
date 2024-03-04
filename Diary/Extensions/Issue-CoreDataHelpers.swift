@@ -44,9 +44,9 @@ extension Issue {
 
     var issueStatus: String {
         if completed {
-            return NSLocalizedString("Closed", comment: "This issue has been resolved by the user.")
+            return NSLocalizedString("Favorite", comment: "This entry has been bookmarked.")
         } else {
-            return NSLocalizedString("Open", comment: "This issue is currently unresolved.")
+            return NSLocalizedString("", comment: "This entry is not bookmarked.")
         }
     }
 

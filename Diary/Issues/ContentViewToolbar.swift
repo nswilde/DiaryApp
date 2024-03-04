@@ -34,8 +34,8 @@ struct ContentViewToolbar: View {
 
             Picker("Status", selection: $dataController.filterStatus) {
                 Text("All").tag(Status.all)
-                Text("Open").tag(Status.open)
-                Text("Closed").tag(Status.closed)
+                Text("Saved").tag(Status.open)
+                Text("Normal").tag(Status.closed)
             }
             .disabled(dataController.filterEnabled == false)
 
@@ -52,7 +52,7 @@ struct ContentViewToolbar: View {
         }
 
         Button(action: dataController.newIssue) {
-            Label("New Issue", systemImage: "square.and.pencil")
+            Label("New Entry", systemImage: "square.and.pencil")
         }
     }
 }

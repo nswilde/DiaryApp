@@ -31,7 +31,7 @@ struct UserFilterRow: View {
                 }
                 .accessibilityElement()
                 .accessibilityLabel(filter.name)
-                .accessibilityHint("\(filter.activeIssuesCount) issues")
+                .accessibilityHint("\(filter.activeIssuesCount) entries")
         }
     }
 }

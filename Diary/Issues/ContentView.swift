@@ -20,20 +20,21 @@ struct ContentView: View {
             }
             .onDelete(perform: viewModel.delete)
         }
-        .navigationTitle("Issues")
+        .navigationTitle("Diary Entries")
         .searchable(text: $viewModel.filterText,
                     tokens: $viewModel.filterTokens,
                     suggestedTokens: .constant(viewModel.suggestedFilterTokens),
-            prompt: "Filter issues, or type # to add tags"
+                    prompt: "Filter entries, or type # to add tags"
             ) { tag in
             Text(tag.tagName)
         }
         .toolbar(content: ContentViewToolbar.init)
-        .onAppear(perform: askForReview)
+        // Disabled popup for debug, re-enable later
+        // .onAppear(perform: askForReview)
         .onOpenURL(perform: openURL)
         .userActivity(newIssueActivity) { activity in
             activity.isEligibleForPrediction = true
-            activity.title = "New Issue"
+            activity.title = "New Entry"
         }
         .onContinueUserActivity(newIssueActivity, perform: resumeActivity)
     }
