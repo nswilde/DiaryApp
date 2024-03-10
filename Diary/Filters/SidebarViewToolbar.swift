@@ -11,6 +11,7 @@ struct SidebarViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @State private var showingAwards: Bool = false
     @State private var showingStore = false
+    @State private var graphShowing = false
 
     var body: some View {
         Button(action: tryNewTag) {

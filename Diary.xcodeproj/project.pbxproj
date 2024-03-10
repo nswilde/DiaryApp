@@ -52,6 +52,7 @@
 		54EBA9DF2B8A997F00F85662 /* TagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EBA9DE2B8A997F00F85662 /* TagTests.swift */; };
 		54EBA9E12B8AA14C00F85662 /* AwardsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EBA9E02B8AA14C00F85662 /* AwardsTest.swift */; };
 		54EBA9E32B8AA8DD00F85662 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EBA9E22B8AA8DD00F85662 /* DevelopmentTests.swift */; };
+		54FC349A2B9CF4C6008AECC4 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC34992B9CF4C6008AECC4 /* LineChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		54EBA9DE2B8A997F00F85662 /* TagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTests.swift; sourceTree = "<group>"; };
 		54EBA9E02B8AA14C00F85662 /* AwardsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsTest.swift; sourceTree = "<group>"; };
 		54EBA9E22B8AA8DD00F85662 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
+		54FC34992B9CF4C6008AECC4 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				5403C5D02B5DC4520021F326 /* ContentView.swift */,
+				54FC34992B9CF4C6008AECC4 /* LineChartView.swift */,
 				5449687B2B8D2EB700A9481D /* ContentViewModel.swift */,
 				5434A4E02B8569B40074A70B /* ContentViewToolbar.swift */,
 				542C821A2B674F380039959A /* IssueRow.swift */,
@@ -502,6 +505,7 @@
 				546DE7F82B8FED4300E4B152 /* DataController-Notifications.swift in Sources */,
 				549648542B7258DF00C76788 /* AwardsView.swift in Sources */,
 				543557E42B69ABBD00397E59 /* NoIssueView.swift in Sources */,
+				54FC349A2B9CF4C6008AECC4 /* LineChartView.swift in Sources */,
 				54EAB1E42B64A07100D0CB32 /* Tag-CoreDataHelpers.swift in Sources */,
 				546DE8222B93EDBD00E4B152 /* SceneDelegate.swift in Sources */,
 				5403C5DF2B5DC52A0021F326 /* Main.xcdatamodeld in Sources */,

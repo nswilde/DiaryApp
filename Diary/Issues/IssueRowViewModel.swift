@@ -8,8 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-
 extension IssueRow {
     @dynamicMemberLookup
     class ViewModel: ObservableObject {
@@ -21,8 +19,7 @@ extension IssueRow {
             }
             if issue.priority == 1 {
                 return Color.yellow
-            }
-            else {
+            } else {
                 return Color.green
             }
         }
