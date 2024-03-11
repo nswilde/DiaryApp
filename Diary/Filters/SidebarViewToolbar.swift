@@ -11,7 +11,7 @@ struct SidebarViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @State private var showingAwards: Bool = false
     @State private var showingStore = false
-    @State private var graphShowing = false
+    @State private var showingCharts = false
 
     var body: some View {
         Button(action: tryNewTag) {
@@ -25,6 +25,12 @@ struct SidebarViewToolbar: View {
             Label("Show awards", systemImage: "rosette")
         }
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
+        Button {
+            showingCharts.toggle()
+        } label: {
+            Label("Show charts", systemImage: "chart.line.uptrend.xyaxis")
+        }
+        //.sheet(isPresented: $showingCharts, content: LineChartView.init)
 
         #if DEBUG
         Button {

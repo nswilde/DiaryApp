@@ -33,6 +33,8 @@ class DataController: ObservableObject {
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedIssue: Issue?
 
+    @Published var chartData: [DataPoint] = []
+
     @Published var filterText = ""
     @Published var filterTokens = [Tag]()
 
@@ -173,6 +175,7 @@ class DataController: ObservableObject {
                 issue.creationDate = .now
                 issue.completed = Bool.random()
                 issue.priority = Int16.random(in: 0...2)
+                issue.score = Int16.random(in: 0...100)
                 tag.addToIssues(issue)
             }
         }
@@ -322,6 +325,7 @@ class DataController: ObservableObject {
         issue.title = NSLocalizedString("New Diary Entry", comment: "Create a new entry")
         issue.creationDate = .now
         issue.priority = 1
+        issue.score = 50
 
         // If we are currently browsing a user-created tag,
         // immediately add this new issue to the tag, otherwise

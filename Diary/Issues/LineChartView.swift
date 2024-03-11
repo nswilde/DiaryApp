@@ -7,55 +7,51 @@
 
 import SwiftUI
 import Charts
+import CoreData
 
-struct TestData: Identifiable, Equatable {
-    let year: Date
-
-    let score: Double
-
-    var id: Date { year }
-
-    static var example: [TestData] {
-        [TestData(year: Date.now, score: 15),
-         TestData(year: Date.now.addingTimeInterval(86400), score: 20),
-         TestData(year: Date.now.addingTimeInterval(2186400), score: 65),
-         TestData(year: Date.now.addingTimeInterval(1386400), score: 90),
-         TestData(year: Date.now.addingTimeInterval(1586400), score: 75)]
-    }
+struct DataPoint: Identifiable {
+    var id = UUID()
+    var xValue: Int
+    var yValue: Int
 }
 
 struct LineChartView: View {
-    let exampleData = TestData.example
-
-    var data: [(type: String, testData: [TestData])] {
-        [(type: "test", testData: exampleData)]
-    }
-
     var dataController: DataController
-    let issues = [Issue]()
+    private let issueController: NSFetchedResultsController<Issue>
+    var issues = [Issue]()
 
     init(dataController: DataController) {
         self.dataController = dataController
+
+        let request = Issue.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Issue.title, ascending: true)]
+
+        issueController = NSFetchedResultsController(
+            fetchRequest: request,
+            managedObjectContext: dataController.container.viewContext,
+            sectionNameKeyPath: nil,
+            cacheName: nil
+        )
+
+        do {
+            try issueController.performFetch()
+            issues = issueController.fetchedObjects ?? []
+        } catch {
+            print("Failed to fetch tags.")
+        }
     }
 
-    let testArray: [Double] = [1.0, 2.0, 3.0, 4.0, 5.0]
-
     var body: some View {
-        VStack {
-            Chart {
-                ForEach(data, id: \.type) { dataSeries in
-                    ForEach(dataSeries.testData) { data in
-                        LineMark(x: .value("Year", data.year),
-                                y: .value("Population", data.score))
-                    }
-                    .foregroundStyle(by: .value("Pet type", dataSeries.type))
-                    .symbol(by: .value("Pet type", dataSeries.type))
-                }
+        Chart {
+            ForEach(issues, id: \.issueCreationDate) { issue in
+                LineMark(x: .value("Date", issue.creationDate!),
+                         y: .value("Score", issue.score))
+                //.foregroundStyle(by: .value("Entry type", issue.issueTitle))
+                //.symbol(by: .value("Entry type", issue.issueTitle))
             }
-            .aspectRatio(1, contentMode: .fit)
-            .padding()
         }
-
+        .aspectRatio(1, contentMode: .fit)
+        .padding()
     }
 }
 

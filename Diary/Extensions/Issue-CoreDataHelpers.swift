@@ -64,6 +64,7 @@ extension Issue {
         issue.content = "This is an example issue."
         issue.priority = 2
         issue.creationDate = .now
+        issue.score = 50
         return issue
     }
 }

@@ -21,6 +21,8 @@ struct IssueView: View {
                     TextField("Title", text: $issue.issueTitle, prompt: Text("Enter the entry title here"))
                         .font(.title)
 
+                    Text("This Entry's score is: \(issue.score)/100")
+
                     Text("**Modified:** \(issue.issueModificationDate.formatted(date: .long, time: .shortened))")
                         .foregroundStyle(.secondary)
 

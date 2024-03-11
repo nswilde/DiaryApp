@@ -34,8 +34,8 @@ struct ContentViewToolbar: View {
 
             Picker("Status", selection: $dataController.filterStatus) {
                 Text("All").tag(Status.all)
-                Text("Saved").tag(Status.open)
-                Text("Normal").tag(Status.closed)
+                Text("Normal").tag(Status.open)
+                Text("Favourite").tag(Status.closed)
             }
             .disabled(dataController.filterEnabled == false)
 
