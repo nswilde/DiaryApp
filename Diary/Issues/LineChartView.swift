@@ -17,7 +17,7 @@ struct DataPoint: Identifiable {
 
 struct LineChartView: View {
     var dataController: DataController
-    private let issueController: NSFetchedResultsController<Issue>
+    let issueController: NSFetchedResultsController<Issue>
     var issues = [Issue]()
 
     init(dataController: DataController) {
@@ -46,8 +46,8 @@ struct LineChartView: View {
             ForEach(issues, id: \.issueCreationDate) { issue in
                 LineMark(x: .value("Date", issue.creationDate!),
                          y: .value("Score", issue.score))
-                //.foregroundStyle(by: .value("Entry type", issue.issueTitle))
-                //.symbol(by: .value("Entry type", issue.issueTitle))
+                .foregroundStyle(by: .value("Entry type", issue.title ?? "name"))
+                .symbol(by: .value("Entry type", issue.title ?? "N/A symbol"))
             }
         }
         .aspectRatio(1, contentMode: .fit)

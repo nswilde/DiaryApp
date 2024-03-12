@@ -30,7 +30,9 @@ struct SidebarViewToolbar: View {
         } label: {
             Label("Show charts", systemImage: "chart.line.uptrend.xyaxis")
         }
-        //.sheet(isPresented: $showingCharts, content: LineChartView.init)
+        .sheet(isPresented: $showingCharts) {
+            LineChartView(dataController: dataController)
+        }
 
         #if DEBUG
         Button {

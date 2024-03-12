@@ -168,11 +168,32 @@ class DataController: ObservableObject {
             tag.id = UUID()
             tag.name = "\(category)"
 
-            for issueCounter in 1...10 {
+            for issueCounter in 1...2 {
                 let issue = Issue(context: viewContext)
                 issue.title = "Entry \(category)-\(issueCounter)"
                 issue.content = NSLocalizedString("Description goes here", comment: "Enter a description")
-                issue.creationDate = .now
+                issue.creationDate = Date.now - 31536000
+                issue.completed = Bool.random()
+                issue.priority = Int16.random(in: 0...2)
+                issue.score = Int16.random(in: 0...100)
+                tag.addToIssues(issue)
+
+            }
+            for issueCounter in 1...2 {
+                let issue = Issue(context: viewContext)
+                issue.title = "Entry \(category)-\(issueCounter)"
+                issue.content = NSLocalizedString("Description goes here", comment: "Enter a description")
+                issue.creationDate = Date.now + 31536000
+                issue.completed = Bool.random()
+                issue.priority = Int16.random(in: 0...2)
+                issue.score = Int16.random(in: 0...100)
+                tag.addToIssues(issue)
+            }
+            for issueCounter in 1...2 {
+                let issue = Issue(context: viewContext)
+                issue.title = "Entry \(category)-\(issueCounter)"
+                issue.content = NSLocalizedString("Description goes here", comment: "Enter a description")
+                issue.creationDate = Date.now
                 issue.completed = Bool.random()
                 issue.priority = Int16.random(in: 0...2)
                 issue.score = Int16.random(in: 0...100)
