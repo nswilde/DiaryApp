@@ -8,18 +8,10 @@
 import SwiftUI
 
 struct SidebarView: View {
-    @ObservedObject private var viewModel: ViewModel
+    @StateObject private var viewModel: ViewModel
     let smartFilters: [Filter] = [.all, .recent]
 
-    @State private var showingCharts = false
-
-    init(dataController: DataController) {
-        let viewModel = ViewModel(dataController: dataController)
-        _viewModel = ObservedObject(wrappedValue: viewModel)
-    }
-
     var body: some View {
-        NavigationView {
             VStack {
                 List(selection: $viewModel.dataController.selectedFilter) {
                     Section("Smart Filters") {
@@ -41,6 +33,10 @@ struct SidebarView: View {
                 TextField("New name", text: $viewModel.tagName)
             }
         }
+
+    init(dataController: DataController) {
+        let viewModel = ViewModel(dataController: dataController)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 }
 

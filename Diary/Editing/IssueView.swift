@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IssueView: View {
     @EnvironmentObject var dataController: DataController
-    @ObservedObject var issue: Issue
+    @StateObject var issue: Issue
 
     @State private var showingNotificationsError = false
     @Environment(\.openURL) var openURL

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct IssueViewToolbar: View {
     @EnvironmentObject var dataController: DataController
-    @ObservedObject var issue: Issue
+    @StateObject var issue: Issue
 
     @State private var engine = try? CHHapticEngine()
 

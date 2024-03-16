@@ -32,9 +32,6 @@ class DataController: ObservableObject {
 
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedIssue: Issue?
-
-    @Published var chartData: [DataPoint] = []
-
     @Published var filterText = ""
     @Published var filterTokens = [Tag]()
 
@@ -157,6 +154,12 @@ class DataController: ObservableObject {
 
     func remoteStoreChanged(_ notification: Notification) {
         objectWillChange.send()
+    }
+
+    func saveController() {
+        let viewContext = container.viewContext
+
+        try? viewContext.save()
     }
 
     func createSampleData() {

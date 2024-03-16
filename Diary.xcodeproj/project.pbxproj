@@ -22,6 +22,7 @@
 		5434A4E72B85955D0074A70B /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434A4E62B85955D0074A70B /* UserFilterRow.swift */; };
 		543557E22B69ABB400397E59 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543557E12B69ABB400397E59 /* IssueView.swift */; };
 		543557E42B69ABBD00397E59 /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543557E32B69ABBD00397E59 /* NoIssueView.swift */; };
+		54362BE82BA4FC3B0021DBB7 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54362BE72BA4FC3B0021DBB7 /* ChartData.swift */; };
 		5449687A2B8C019400A9481D /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544968792B8C019400A9481D /* SidebarViewModel.swift */; };
 		5449687C2B8D2EB700A9481D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449687B2B8D2EB700A9481D /* ContentViewModel.swift */; };
 		5449687E2B8D33B000A9481D /* IssueRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449687D2B8D33B000A9481D /* IssueRowViewModel.swift */; };
@@ -104,6 +105,7 @@
 		5434A4E62B85955D0074A70B /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		543557E12B69ABB400397E59 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		543557E32B69ABBD00397E59 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
+		54362BE72BA4FC3B0021DBB7 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		544968792B8C019400A9481D /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		5449687B2B8D2EB700A9481D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		5449687D2B8D33B000A9481D /* IssueRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowViewModel.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 			children = (
 				5403C5D02B5DC4520021F326 /* ContentView.swift */,
 				54FC34992B9CF4C6008AECC4 /* LineChartView.swift */,
+				54362BE72BA4FC3B0021DBB7 /* ChartData.swift */,
 				5449687B2B8D2EB700A9481D /* ContentViewModel.swift */,
 				5434A4E02B8569B40074A70B /* ContentViewToolbar.swift */,
 				542C821A2B674F380039959A /* IssueRow.swift */,
@@ -511,6 +514,7 @@
 				5403C5DF2B5DC52A0021F326 /* Main.xcdatamodeld in Sources */,
 				5496484C2B72530500C76788 /* Bundle-Decodable.swift in Sources */,
 				54EAB1E22B649F4400D0CB32 /* Issue-CoreDataHelpers.swift in Sources */,
+				54362BE82BA4FC3B0021DBB7 /* ChartData.swift in Sources */,
 				5449687A2B8C019400A9481D /* SidebarViewModel.swift in Sources */,
 				547364BF2B61C4010019BC90 /* DetailView.swift in Sources */,
 				5434A4E12B8569B40074A70B /* ContentViewToolbar.swift in Sources */,

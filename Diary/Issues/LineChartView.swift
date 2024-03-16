@@ -9,16 +9,33 @@ import SwiftUI
 import Charts
 import CoreData
 
-struct DataPoint: Identifiable {
-    var id = UUID()
-    var xValue: Int
-    var yValue: Int
-}
-
 struct LineChartView: View {
+    @Environment(\.dismiss) var dismiss
     var dataController: DataController
-    let issueController: NSFetchedResultsController<Issue>
     var issues = [Issue]()
+    let issueController: NSFetchedResultsController<Issue>
+    let fetchRequest: NSFetchRequest<Issue> = Issue.fetchRequest()
+
+    var body: some View {
+        ScrollView {
+            Button("Dismiss") {
+                dismiss()
+            }
+            Button("Print issues") {
+                sortData()
+            }
+            Chart {
+                ForEach(issues, id: \.id) { issue in
+                    LineMark(x: .value("Date", issue.creationDate!),
+                             y: .value("Score", issue.score))
+                    .foregroundStyle(by: .value("Entry type", issue.title ?? "name"))
+                    .symbol(by: .value("Entry type", issue.title ?? "N/A symbol"))
+                }
+            }
+            .aspectRatio(1, contentMode: .fit)
+            .padding()
+        }
+    }
 
     init(dataController: DataController) {
         self.dataController = dataController
@@ -37,24 +54,17 @@ struct LineChartView: View {
             try issueController.performFetch()
             issues = issueController.fetchedObjects ?? []
         } catch {
-            print("Failed to fetch tags.")
+            print("Failed to fetch issues.")
         }
     }
 
-    var body: some View {
-        Chart {
-            ForEach(issues, id: \.issueCreationDate) { issue in
-                LineMark(x: .value("Date", issue.creationDate!),
-                         y: .value("Score", issue.score))
-                .foregroundStyle(by: .value("Entry type", issue.title ?? "name"))
-                .symbol(by: .value("Entry type", issue.title ?? "N/A symbol"))
-            }
+    func sortData() {
+        for amount in 0..<issues.count {
+            print(issues[amount].creationDate ?? Date.distantPast)
         }
-        .aspectRatio(1, contentMode: .fit)
-        .padding()
     }
 }
 
-#Preview {
-    LineChartView(dataController: .preview)
-}
+//#Preview {
+//    LineChartView(dataController: dataController)
+//}

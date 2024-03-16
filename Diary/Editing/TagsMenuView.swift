@@ -10,7 +10,7 @@ import SwiftUI
 // These tags are used in IssueView
 struct TagsMenuView: View {
     @EnvironmentObject private var dataController: DataController
-    @ObservedObject var issue: Issue
+    @StateObject var issue: Issue
 
     var body: some View {
         Menu {

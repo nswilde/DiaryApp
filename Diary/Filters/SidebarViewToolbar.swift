@@ -9,16 +9,18 @@ import SwiftUI
 
 struct SidebarViewToolbar: View {
     @EnvironmentObject var dataController: DataController
+
+    @State private var showingCharts: Bool = false
     @State private var showingAwards: Bool = false
     @State private var showingStore = false
-    @State private var showingCharts = false
 
     var body: some View {
         Button(action: tryNewTag) {
             Label("Add tag", systemImage: "plus")
         }
-        .sheet(isPresented: $showingStore, content: StoreView.init)
-
+        .sheet(isPresented: $showingStore) {
+            StoreView()
+        }
         Button {
             showingAwards.toggle()
         } label: {
@@ -27,13 +29,14 @@ struct SidebarViewToolbar: View {
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
         Button {
             showingCharts.toggle()
+            dataController.saveController()
         } label: {
             Label("Show charts", systemImage: "chart.line.uptrend.xyaxis")
         }
         .sheet(isPresented: $showingCharts) {
             LineChartView(dataController: dataController)
         }
-
+        
         #if DEBUG
         Button {
             dataController.deleteAll()
@@ -51,6 +54,6 @@ struct SidebarViewToolbar: View {
     }
 }
 
-#Preview {
-    SidebarViewToolbar()
-}
+//#Preview {
+//    SidebarViewToolbar()
+//}
