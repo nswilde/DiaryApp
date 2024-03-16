@@ -17,13 +17,13 @@ struct DiaryApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationSplitView {
-                SidebarView(dataController: dataController)
-            } content: {
-                ContentView(dataController: dataController)
-            } detail: {
-                DetailView()
-            }
+                NavigationSplitView {
+                    SidebarView(dataController: dataController)
+                } content: {
+                    ContentView(dataController: dataController)
+                } detail: {
+                    DetailView()
+                }
                 .environment(\.managedObjectContext, dataController.container.viewContext)
                 .environmentObject(dataController)
                 .onChange(of: scenePhase) {
@@ -34,8 +34,8 @@ struct DiaryApp: App {
                     }
                 }
                 .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
-        }
-    }
+                }
+            }
 
     // Spotlight part 3/3: Function that allows us to respond to Spotlight
     // Search at app launch. "onContinueUserActivity" extension above

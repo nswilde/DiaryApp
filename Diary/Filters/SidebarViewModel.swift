@@ -73,7 +73,6 @@ extension SidebarView {
             tagToRename = filter.tag
             tagName = filter.name
             renamingTag = true
-            dataController.save()
         }
 
         func completeRename() {

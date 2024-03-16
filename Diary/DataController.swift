@@ -34,6 +34,7 @@ class DataController: ObservableObject {
     @Published var selectedIssue: Issue?
     @Published var filterText = ""
     @Published var filterTokens = [Tag]()
+    @Published var showingCharts = false
 
     @Published var filterEnabled = false
     @Published var filterPriority = -1

@@ -10,7 +10,6 @@ import Charts
 import CoreData
 
 struct LineChartView: View {
-    @Environment(\.dismiss) var dismiss
     var dataController: DataController
     var issues = [Issue]()
     let issueController: NSFetchedResultsController<Issue>
@@ -18,9 +17,7 @@ struct LineChartView: View {
 
     var body: some View {
         ScrollView {
-            Button("Dismiss") {
-                dismiss()
-            }
+
             Button("Print issues") {
                 sortData()
             }
@@ -35,6 +32,7 @@ struct LineChartView: View {
             .aspectRatio(1, contentMode: .fit)
             .padding()
         }
+        .navigationTitle("Your chart data")
     }
 
     init(dataController: DataController) {
@@ -65,6 +63,6 @@ struct LineChartView: View {
     }
 }
 
-//#Preview {
-//    LineChartView(dataController: dataController)
-//}
+#Preview {
+    LineChartView(dataController: .preview)
+}

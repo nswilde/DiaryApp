@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.requestReview) var requestReview
-    @StateObject var viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
 
     private let newIssueActivity = "com.NikkiW.Diary.newIssue"
 
@@ -41,7 +41,7 @@ struct ContentView: View {
 
     init(dataController: DataController) {
         let viewModel = ViewModel(dataController: dataController)
-        _viewModel = StateObject(wrappedValue: viewModel)
+        _viewModel = ObservedObject(wrappedValue: viewModel)
     }
 
     func askForReview() {

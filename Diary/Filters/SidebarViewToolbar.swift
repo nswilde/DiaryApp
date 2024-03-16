@@ -27,15 +27,6 @@ struct SidebarViewToolbar: View {
             Label("Show awards", systemImage: "rosette")
         }
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
-        Button {
-            showingCharts.toggle()
-            dataController.saveController()
-        } label: {
-            Label("Show charts", systemImage: "chart.line.uptrend.xyaxis")
-        }
-        .sheet(isPresented: $showingCharts) {
-            LineChartView(dataController: dataController)
-        }
         
         #if DEBUG
         Button {
