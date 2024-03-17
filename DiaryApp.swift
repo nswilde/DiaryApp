@@ -17,6 +17,7 @@ struct DiaryApp: App {
 
     var body: some Scene {
         WindowGroup {
+            TabView {
                 NavigationSplitView {
                     SidebarView(dataController: dataController)
                 } content: {
@@ -33,9 +34,20 @@ struct DiaryApp: App {
                         return
                     }
                 }
-                .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
+                .tabItem {
+                    Label("Home", systemImage: "house")
                 }
+
+                LineChartView(dataController: dataController)
+                    .tabItem {
+                        Image(systemName: "chart.xyaxis.line")
+                        Text("Charts")
+                    }
+
             }
+            .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
+        }
+    }
 
     // Spotlight part 3/3: Function that allows us to respond to Spotlight
     // Search at app launch. "onContinueUserActivity" extension above

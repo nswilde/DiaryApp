@@ -12,6 +12,8 @@ struct Filter: Identifiable, Hashable {
     var name: String
     var icon: String
     var minModificationDate = Date.distantPast
+    var minCreationDate: Date?
+    var maxCreationDate: Date?
     var tag: Tag?
 
     var activeIssuesCount: Int {
@@ -23,11 +25,19 @@ struct Filter: Identifiable, Hashable {
         name: "All Diary Entries",
         icon: "tray"
     )
-    static var recent = Filter(id: UUID(),
+    static var recent = Filter(
+        id: UUID(),
         name: "Recent Diary Entries",
         icon: "clock",
         minModificationDate: .now.addingTimeInterval(86400 * -7)
     )
+//    static var lastYear = Filter(
+//        id: UUID(),
+//        name: "Last 12 months",
+//        icon: "calendar",
+//        minCreationDate: <#T##Date?#>,
+//        maxCreationDate: <#T##Date?#>
+//    )
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

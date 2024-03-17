@@ -10,10 +10,8 @@ import SwiftUI
 struct SidebarView: View {
     @ObservedObject private var viewModel: ViewModel
     let smartFilters: [Filter] = [.all, .recent]
-    @State var selection = 1
 
     var body: some View {
-        TabView(selection: $selection) {
             VStack {
                 List(selection: $viewModel.dataController.selectedFilter) {
                     Section("Smart Filters") {
@@ -34,20 +32,7 @@ struct SidebarView: View {
                 Button("Cancel", role: .cancel) { }
                 TextField("New name", text: $viewModel.tagName)
             }
-            .tabItem {
-                Image(systemName: "house")
-                Text("Home")
-            }
-            .tag(1)
-
-            LineChartView(dataController: viewModel.dataController)
-                .tabItem {
-                    Image(systemName: "chart.xyaxis.line")
-                    Text("Charts")
-                }
-                .tag(2)
-        }
-        .navigationTitle(selection == 1 ? "Journal" : "Charts")
+            .navigationTitle(viewModel.dataController.appTitle)
     }
 
     init(dataController: DataController) {

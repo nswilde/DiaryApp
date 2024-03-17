@@ -27,7 +27,7 @@ struct SidebarViewToolbar: View {
             Label("Show awards", systemImage: "rosette")
         }
         .sheet(isPresented: $showingAwards, content: AwardsView.init)
-        
+
         #if DEBUG
         Button {
             dataController.deleteAll()
@@ -44,7 +44,3 @@ struct SidebarViewToolbar: View {
         }
     }
 }
-
-//#Preview {
-//    SidebarViewToolbar()
-//}

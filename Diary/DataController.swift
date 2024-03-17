@@ -36,6 +36,8 @@ class DataController: ObservableObject {
     @Published var filterTokens = [Tag]()
     @Published var showingCharts = false
 
+    @Published var appTitle = "Journal"
+
     @Published var filterEnabled = false
     @Published var filterPriority = -1
     @Published var filterStatus = Status.all
@@ -161,6 +163,43 @@ class DataController: ObservableObject {
         let viewContext = container.viewContext
 
         try? viewContext.save()
+    }
+
+    func createChartData() {
+        let viewContext = container.viewContext
+        let categories = ["Negative", "Neutral", "Positive"]
+
+        let formatter = ISO8601DateFormatter()
+        let arrayOfDates: [Date] = [
+            // these are in ISO8601 string format
+            "2023-11-25T14:32:15+00:00",
+            "2023-12-24T14:32:15+00:00",
+            "2024-01-15T14:32:15+00:00",
+            "2024-02-22T14:32:15+00:00",
+            "2024-03-12T14:32:15+00:00",
+            "2024-03-17T14:32:15+00:00",
+        ].map {
+            formatter.date(from: $0)!
+        }
+
+        for (index, category) in categories.enumerated() {
+            let tag = Tag(context: viewContext)
+            tag.id = UUID()
+            tag.name = "\(category)"
+
+            for (dateIndex, date) in arrayOfDates.enumerated() {
+                let issue = Issue(context: viewContext)
+                issue.title = "Entry \(category)-\(dateIndex)"
+                issue.content = NSLocalizedString("Description goes here", comment: "Enter a description")
+                issue.creationDate = date
+                issue.completed = Bool.random()
+                issue.priority = Int16.random(in: 0...2)
+                issue.score = Int16.random(in: 0...100)
+                tag.addToIssues(issue)
+            }
+
+            try? viewContext.save()
+        }
     }
 
     func createSampleData() {

@@ -18,19 +18,28 @@ struct LineChartView: View {
     var body: some View {
         ScrollView {
 
-            Button("Print issues") {
-                sortData()
+            #if DEBUG
+            Button("DEBUG: Print issues") {
+                dataController.deleteAll()
+                printData()
             }
+            #endif
+
             Chart {
                 ForEach(issues, id: \.id) { issue in
                     LineMark(x: .value("Date", issue.creationDate!),
                              y: .value("Score", issue.score))
-                    .foregroundStyle(by: .value("Entry type", issue.title ?? "name"))
-                    .symbol(by: .value("Entry type", issue.title ?? "N/A symbol"))
+                    .foregroundStyle(by: .value("Entry type", issue.score))
+                    .symbol {
+                        Circle()
+                    }
                 }
             }
             .aspectRatio(1, contentMode: .fit)
             .padding()
+
+            Text("Your mood scores for the last (months/years)")
+                .opacity(0.5)
         }
         .navigationTitle("Your chart data")
     }
@@ -56,10 +65,8 @@ struct LineChartView: View {
         }
     }
 
-    func sortData() {
-        for amount in 0..<issues.count {
-            print(issues[amount].creationDate ?? Date.distantPast)
-        }
+    func printData() {
+        dataController.createChartData()
     }
 }
 

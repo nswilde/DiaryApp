@@ -42,7 +42,6 @@
 		549648502B72579600C76788 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5496484E2B72579600C76788 /* Colors.xcassets */; };
 		549648522B72583100C76788 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549648512B72583100C76788 /* Award.swift */; };
 		549648542B7258DF00C76788 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549648532B7258DF00C76788 /* AwardsView.swift */; };
-		54ABAD2C2BA6511C00175244 /* ChartsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ABAD2B2BA6511C00175244 /* ChartsRow.swift */; };
 		54C757F92B8BCEB400998BB2 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C757F82B8BCEB400998BB2 /* PerformanceTests.swift */; };
 		54C758012B8BD60A00998BB2 /* DiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C758002B8BD60A00998BB2 /* DiaryUITests.swift */; };
 		54C758032B8BD60A00998BB2 /* DiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C758022B8BD60A00998BB2 /* DiaryUITestsLaunchTests.swift */; };
@@ -132,7 +131,6 @@
 		5496484E2B72579600C76788 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		549648512B72583100C76788 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		549648532B7258DF00C76788 /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
-		54ABAD2B2BA6511C00175244 /* ChartsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRow.swift; sourceTree = "<group>"; };
 		54C757F82B8BCEB400998BB2 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		54C757FE2B8BD60A00998BB2 /* DiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C758002B8BD60A00998BB2 /* DiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUITests.swift; sourceTree = "<group>"; };
@@ -253,7 +251,6 @@
 			children = (
 				5403C5D02B5DC4520021F326 /* ContentView.swift */,
 				54FC34992B9CF4C6008AECC4 /* LineChartView.swift */,
-				54ABAD2B2BA6511C00175244 /* ChartsRow.swift */,
 				54362BE72BA4FC3B0021DBB7 /* ChartData.swift */,
 				5449687B2B8D2EB700A9481D /* ContentViewModel.swift */,
 				5434A4E02B8569B40074A70B /* ContentViewToolbar.swift */,
@@ -507,7 +504,6 @@
 				546DE8202B93EDB800E4B152 /* AppDelegate.swift in Sources */,
 				5449687C2B8D2EB700A9481D /* ContentViewModel.swift in Sources */,
 				5434A4E52B8595040074A70B /* SmartFilterRow.swift in Sources */,
-				54ABAD2C2BA6511C00175244 /* ChartsRow.swift in Sources */,
 				546DE7FC2B900D4600E4B152 /* DataController-StoreKit.swift in Sources */,
 				546DE7F82B8FED4300E4B152 /* DataController-Notifications.swift in Sources */,
 				549648542B7258DF00C76788 /* AwardsView.swift in Sources */,
